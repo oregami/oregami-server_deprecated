@@ -24,7 +24,7 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
-import org.oregami.entities.KeyObjects.ReleaseGroupType;
+import org.oregami.entities.ReleaseGroupType;
 import org.oregami.entities.KeyObjects.SystemKey;
 
 
@@ -42,6 +42,7 @@ public class ReleaseGroup extends BaseEntity {
 //	@OrderBy("description ASC")
 	private Set<Release> releaseList = new HashSet<Release>();
 
+	@ManyToOne
 	private ReleaseGroupType releaseGroupType;
 
 	private SystemKey system;
